@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.home.HomeController">
+    <children>
+        <ListView fx:id="lvAutomata" editable="true" layoutX="14.0" layoutY="14.0" prefHeight="330.0" prefWidth="211.0" />
+        <Button fx:id="btnNewAutomaton" layoutX="121.0" layoutY="355.0" mnemonicParsing="false" onAction="#btnNewAutomaton_OnAction" text="New Automaton" />
+        <Button fx:id="btnEditAutomaton" layoutX="14.0" layoutY="355.0" mnemonicParsing="false" onAction="#btnEditAutomaton_OnAction" prefHeight="25.0" prefWidth="104.0" text="Edit Automaton" />
+        <Pane layoutX="236.0" layoutY="14.0" prefHeight="127.0" prefWidth="353.0" style="-fx-border-color: BLACK;">
+            <children>
+                <Button fx:id="btnSelect1" layoutX="11.0" layoutY="31.0" mnemonicParsing="false" onAction="#btnSelect1_OnAction" text="Select" />
+                <TextField fx:id="tfAutomatonName1" editable="false" layoutX="66.0" layoutY="31.0" prefHeight="25.0" prefWidth="211.0" promptText="Automaton Name" />
+                <Button fx:id="btnClear1" layoutX="299.0" layoutY="31.0" mnemonicParsing="false" onAction="#btnClear1_OnAction" text="Clear" />
+                <TextField fx:id="tfEnterInput1" editable="false" layoutX="12.0" layoutY="65.0" onAction="#tfEnterInput1_OnAction" prefHeight="25.0" prefWidth="330.0" promptText="Enter Input String..." />
+                <Label fx:id="lblAutomatonType1" layoutX="11.0" layoutY="6.0" text="Automaton Type: " />
+                <Label fx:id="lblInputValidity1" layoutX="11.0" layoutY="96.0" text="Input String Validity: " />
+            </children>
+        </Pane>
+        <Button fx:id="btnCheckDeadlock" layoutX="236.0" layoutY="284.0" mnemonicParsing="false" onAction="#btnCheckDeadlock_OnAction" prefHeight="99.0" prefWidth="145.0" text="Run Deadlock Detection" />
+        <Pane layoutX="236.0" layoutY="148.0" prefHeight="127.0" prefWidth="353.0" style="-fx-border-color: BLACK;">
+            <children>
+                <Button fx:id="btnSelect2" layoutX="11.0" layoutY="31.0" mnemonicParsing="false" onAction="#btnSelect2_OnAction" text="Select" />
+                <TextField fx:id="tfAutomatonName2" editable="false" layoutX="66.0" layoutY="31.0" prefHeight="25.0" prefWidth="211.0" promptText="Automaton Name" />
+                <Button fx:id="btnClear2" layoutX="299.0" layoutY="31.0" mnemonicParsing="false" onAction="#btnClear2_OnAction" text="Clear" />
+                <TextField fx:id="tfEnterInput2" editable="false" layoutX="12.0" layoutY="65.0" onAction="#tfEnterInput2_OnAction" prefHeight="25.0" prefWidth="330.0" promptText="Enter Input String..." />
+                <Label fx:id="lblAutomatonType2" layoutX="11.0" layoutY="6.0" text="Automaton Type: " />
+                <Label fx:id="lblInputValidity2" layoutX="11.0" layoutY="96.0" text="Input String Validity: " />
+            </children>
+        </Pane>
+      <TextArea fx:id="taDeadlock" editable="false" layoutX="388.0" layoutY="281.0" prefHeight="112.0" prefWidth="202.0" wrapText="true" />
+    </children>
+</AnchorPane>

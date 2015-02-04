@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.automaton.AutomatonController">
+    <children>
+        <ListView fx:id="lvTransitions" layoutX="14.0" layoutY="227.0" prefHeight="159.0" prefWidth="220.0" />
+        <TextField fx:id="tfName" layoutX="130.0" layoutY="14.0" prefHeight="25.0" prefWidth="200.0" promptText="Enter name of automaton" />
+        <Label layoutX="21.0" layoutY="18.0" prefHeight="17.0" prefWidth="106.0" text="Automaton Name:" />
+        <Label layoutX="19.0" layoutY="204.0" prefHeight="17.0" prefWidth="87.0" text="Transitions:" />
+        <Button layoutX="493.0" layoutY="314.0" mnemonicParsing="false" onAction="#btnSave_OnAction" prefHeight="72.0" prefWidth="93.0" text="Save" />
+        <Button layoutX="122.0" layoutY="200.0" mnemonicParsing="false" onAction="#btnDeleteTransition_OnAction" text="Delete Transition" />
+        <Button layoutX="356.0" layoutY="200.0" mnemonicParsing="false" onAction="#btnDeleteTerminator_OnAction" text="Delete Terminator" />
+        <Label layoutX="258.0" layoutY="204.0" prefHeight="17.0" prefWidth="87.0" text="Terminators:" />
+        <ListView fx:id="lvTerminators" layoutX="253.0" layoutY="227.0" prefHeight="159.0" prefWidth="220.0" />
+        <Pane layoutX="10.0" layoutY="45.0" prefHeight="40.0" prefWidth="454.0" style="-fx-border-color: BLACK;">
+            <children>
+                <Label layoutX="14.0" layoutY="12.0" text="Add end state:" />
+                <TextField fx:id="tfAddTerminator" layoutX="101.0" layoutY="8.0" prefHeight="25.0" prefWidth="288.0" promptText="Enter state" />
+                <Button layoutX="398.0" layoutY="8.0" mnemonicParsing="false" onAction="#btnAddTerminator_OnAction" text="Add!" />
+            </children>
+        </Pane>
+        <Pane layoutX="10.0" layoutY="84.0" prefHeight="109.0" prefWidth="454.0" style="-fx-border-color: BLACK;">
+            <children>
+                <Button layoutX="398.0" layoutY="13.0" mnemonicParsing="false" onAction="#btnAddTransition_OnAction" text="Add!" />
+                <TextField fx:id="tfSource" layoutX="98.0" layoutY="13.0" prefHeight="25.0" prefWidth="78.0" promptText="Source" />
+                <Label layoutX="14.0" layoutY="17.0" text="Add transition:" />
+                <TextField fx:id="tfInput" layoutX="188.0" layoutY="13.0" prefHeight="25.0" prefWidth="78.0" promptText="Input" />
+                <TextField fx:id="tfTarget" layoutX="329.0" layoutY="13.0" prefHeight="25.0" prefWidth="62.0" promptText="Target" />
+                <Label layoutX="281.0" layoutY="17.0" prefHeight="17.0" prefWidth="42.0" text="====&gt;" />
+                <TextField fx:id="tfStackPush" layoutX="188.0" layoutY="42.0" prefHeight="25.0" prefWidth="78.0" promptText="Stack Push" />
+                <TextField fx:id="tfStackPop" layoutX="99.0" layoutY="42.0" prefHeight="25.0" prefWidth="77.0" promptText="Stack Pop" />
+            </children>
+        </Pane>
+        <Label fx:id="lblAutomatonType" layoutX="342.0" layoutY="18.0" text="Automaton Type:" />
+    </children>
+</AnchorPane>
